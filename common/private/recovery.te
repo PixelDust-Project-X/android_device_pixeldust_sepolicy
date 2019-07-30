@@ -30,5 +30,7 @@ allow recovery self:process setexec;
 domain_trans(recovery, otapreopt_chroot_exec, backuptool)
 
 # Some addons require this for A/B installation compatibility
+userdebug_or_eng(`
 allow recovery system_file:dir mounton;
+')
 ')

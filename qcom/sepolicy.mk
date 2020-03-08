@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all qcom products
-# that inherit from Lineage
+# that inherit from PixelDust Project
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -11,5 +11,5 @@ endif
 
 ifneq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_SEPOLICY_DIRS += \
-    device/custom/sepolicy/qcom/vendor
+    device/pixeldust/sepolicy/qcom/vendor
 endif

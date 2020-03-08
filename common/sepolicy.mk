@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all products that
-# inherit from Lineage
+# inherit from PixelDust Project
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,16 +10,16 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/custom/sepolicy/common/public
+    device/pixeldust/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/custom/sepolicy/common/private
+    device/pixeldust/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/custom/sepolicy/common/dynamic
+    device/pixeldust/sepolicy/common/dynamic
 else
 BOARD_SEPOLICY_DIRS += \
-    device/custom/sepolicy/common/dynamic \
-    device/custom/sepolicy/common/vendor
+    device/pixeldust/sepolicy/common/dynamic \
+    device/pixeldust/sepolicy/common/vendor
 endif

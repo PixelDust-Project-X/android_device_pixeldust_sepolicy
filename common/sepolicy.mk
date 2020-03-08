@@ -3,11 +3,8 @@
 # inherit from PixelDust Project
 #
 
-ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
-ifeq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
+# Don't build the vendor sepolicies for now and ever
 TARGET_USES_PREBUILT_VENDOR_SEPOLICY ?= true
-endif
-endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
     device/pixeldust/sepolicy/common/public
